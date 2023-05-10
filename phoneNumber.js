@@ -13,6 +13,16 @@ function createPhoneNumber(array) {
     return `(${array.splice(0, 3).join('')}) ${array.splice(0, 3).join('')}-${array.splice(0, 4).join('')}`
 }
 
-// return `(${array.splice(0, 3)}) ${array.splice(0, 3)}-${array.splice(0, 4)}`
-// }
+
+
 console.log(createPhoneNumber(array))
+
+function createPhoneNumber1(array1) {
+    let template = "(xxx) xxx-xxxx"
+    for (let i in array1){
+        template = template.replace('x', array1[i])
+    }
+return template
+}
+
+console.log(createPhoneNumber1([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
